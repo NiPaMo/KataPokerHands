@@ -1,3 +1,5 @@
+package com.labs.nipamo.pokerhands;
+
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +16,6 @@ public class Main {
 		String white = reader.nextLine();
 		
 		reader.close();
-		
 	}
 
 }
