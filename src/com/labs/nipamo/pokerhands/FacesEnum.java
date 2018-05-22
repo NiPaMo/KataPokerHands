@@ -20,4 +20,17 @@ public enum FacesEnum {
 	FacesEnum(String str) { 
 		value = str; 
 	}
+	
+	// Return the enum using the given string value
+	public static FacesEnum getEnum(String str) 
+	{
+		for (FacesEnum face : values())
+		{
+			if (face.value.equals(str))
+				return face;
+		}
+		
+		// Validate input
+		throw new IllegalArgumentException("Invalid face - \""+ str + "\"");
+	}
 }
