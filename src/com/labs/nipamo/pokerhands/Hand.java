@@ -2,9 +2,11 @@ package com.labs.nipamo.pokerhands;
 
 import java.util.ArrayList;
 
+import com.labs.nipamo.pokerhands.ranking.RanksEnum;
+
 public class Hand {
 	private ArrayList<Card> cards;
-	private int rank;
+	private RanksEnum rank;
 	private FacesEnum score;
 	
 	public Hand(Card c1, Card c2, Card c3, Card c4, Card c5) {
@@ -20,11 +22,11 @@ public class Hand {
 		return this.cards.get(i);
 	}
 	
-	public void setRank(int r) {
+	public void setRank(RanksEnum r) {
 		 this.rank = r;
 	}
 	
-	public int getRank() {
+	public RanksEnum getRank() {
 		return this.rank;	
 	}	
 	

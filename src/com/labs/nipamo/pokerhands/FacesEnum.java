@@ -21,6 +21,10 @@ public enum FacesEnum {
 		value = str; 
 	}
 	
+	public String getValue() {
+		return this.value;
+	}
+	
 	// Return the enum using the given string value
 	public static FacesEnum getEnum(String str) 
 	{
