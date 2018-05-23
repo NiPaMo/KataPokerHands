@@ -6,7 +6,7 @@ import com.labs.nipamo.pokerhands.ranking.*;
 public class Main {
 	private static Hand hand1;
 	private static Hand hand2;
-	private static int winner;	
+	private static String result;
 	
 	public static void main(String[] args) {
 		Scanner reader = new Scanner(System.in);
@@ -19,27 +19,18 @@ public class Main {
 		String white = reader.nextLine();	
 		reader.close();
 		
-		// Parse the input for both hands
-		hand1 = Parser.parseInput(black);
-		hand2 = Parser.parseInput(white);
+		// Create the hand objects
+		hand1 = new Hand(black);
+		hand2 = new Hand(white);
 		
 		// Assign rank and score for each hand
 		Ranker.rank(hand1);
 		Ranker.rank(hand2);
 		
 		// Compare the rank and score of each hand to determine a winner
-		winner = Comparator.compareRank(hand1, hand2);
-	
-		// Print out the results
-		if (winner == 1) {
-			System.out.println("Black wins. - with " + 
-					hand1.getRank().getValue() + ": " + hand1.getScore().getValue());
-		} else if (winner == 2){
-			System.out.println("White wins. - with " + 
-					hand2.getRank().getValue() + ": " + hand2.getScore().getValue());
-		} else {
-			System.out.println("Tie");
-		}
+		result = Comparator.getResult(hand1, hand2);
+		
+		// Print out the result
+		System.out.println(result);
 	}
-
 }

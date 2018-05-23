@@ -22,14 +22,26 @@ public enum FacesEnum {
 	}
 	
 	public String getValue() {
-		return this.value;
+		// Create longer strings from values
+		switch (this.value) {
+			case "T":
+				return "10";
+			case "J":
+				return "Jack";
+			case "Q":
+				return "Queen";
+			case "K":
+				return "King";
+			case "A":
+				return "Ace";
+			default:
+				return this.value;
+		}
 	}
 	
 	// Return the enum using the given string value
-	public static FacesEnum getEnum(String str) 
-	{
-		for (FacesEnum face : values())
-		{
+	public static FacesEnum getEnum(String str) {
+		for (FacesEnum face : values()) {
 			if (face.value.equals(str))
 				return face;
 		}
