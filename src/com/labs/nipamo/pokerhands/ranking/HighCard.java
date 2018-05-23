@@ -8,13 +8,18 @@ public class HighCard implements IRank {
 
 	@Override
 	public boolean isRank(Hand h) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 	@Override
-	public FacesEnum getScore(Hand h) {
-		// TODO Auto-generated method stub
-		return this.score;
+	public void setScore(Hand h) {
+		score = h.getCard(0).getFace();
+		
+		for (int i = 0; i < 5; i++) {
+			if (score.compareTo(h.getCard(i).getFace()) < 0)
+				score = h.getCard(i).getFace();
+		}
+		
+		h.setScore(score);
 	}
 }

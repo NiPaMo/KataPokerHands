@@ -13,8 +13,8 @@ public class FullHouse implements IRank {
 	}
 	
 	@Override
-	public FacesEnum getScore(Hand h) {
+	public void setScore(Hand h) {
 		// TODO Auto-generated method stub
-		return this.score;
+		h.setScore(score);
 	}
 }
