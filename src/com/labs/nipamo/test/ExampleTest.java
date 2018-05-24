@@ -1,4 +1,4 @@
-package com.labs.nipmao.test;
+package com.labs.nipamo.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 

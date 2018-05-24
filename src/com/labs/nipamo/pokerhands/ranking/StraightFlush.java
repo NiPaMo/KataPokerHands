@@ -21,10 +21,13 @@ public class StraightFlush implements IRank {
 	
 	@Override
 	public void setScore(Hand h) {
+		score = h.getCard(0).getFace();
+		
 		for (int i = 0; i < 5; i++) {
 			if (score.compareTo(h.getCard(i).getFace()) < 0)
 				score = h.getCard(i).getFace();
 		}
+
 		
 		h.setScore(score);
 	}
