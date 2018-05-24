@@ -13,7 +13,7 @@ public class ThreeOfAKind implements IRank {
 	public boolean isRank(Hand h) {
 		h.setRank(RanksEnum.THREE_OF_A_KIND);
 		
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 2; i++) {
 			face1 = h.getCard(i).getFace();
 			face2 = h.getCard(i + 1).getFace();		
 			face3 = h.getCard(i + 3).getFace();

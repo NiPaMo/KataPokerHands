@@ -12,7 +12,7 @@ public class Pair implements IRank {
 	public boolean isRank(Hand h) {
 		h.setRank(RanksEnum.PAIR);
 
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 4; i++) {
 			face1 = h.getCard(i).getFace();
 			face2 = h.getCard(i + 1).getFace();			
 			if (face1.compareTo(face2) == 0)
