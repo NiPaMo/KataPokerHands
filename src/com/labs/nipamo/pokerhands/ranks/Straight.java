@@ -13,9 +13,7 @@ public class Straight implements IRank {
 	private Face face5;
 	
 	@Override
-	public boolean isRank(Hand h) {
-		h.setRank(Rank.STRAIGHT);
-		
+	public boolean isRank(Hand h) {		
 		face1 = h.getCard(0).getFace();
 		face2 = h.getCard(1).getFace();
 		face3 = h.getCard(2).getFace();
@@ -26,8 +24,10 @@ public class Straight implements IRank {
 		if (face2.ordinal() == first + 1 &&
 			face3.ordinal() == first + 2 &&
 			face4.ordinal() == first + 3 &&
-			face5.ordinal() == first + 4)
+			face5.ordinal() == first + 4) {
+			h.setRank(Rank.STRAIGHT);
 			return true;
+		}
 		
 		return false;
 	}

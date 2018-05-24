@@ -11,15 +11,15 @@ public class ThreeOfAKind implements IRank {
 	private Face face3;
 
 	@Override
-	public boolean isRank(Hand h) {
-		h.setRank(Rank.THREE_OF_A_KIND);
-		
-		for (int i = 0; i < 2; i++) {
+	public boolean isRank(Hand h) {		
+		for (int i = 0; i < 3; i++) {
 			face1 = h.getCard(i).getFace();
 			face2 = h.getCard(i + 1).getFace();		
-			face3 = h.getCard(i + 3).getFace();
-			if (face1.compareTo(face2) == 0 && face1.compareTo(face3) == 0)
+			face3 = h.getCard(i + 2).getFace();
+			if (face1.compareTo(face2) == 0 && face1.compareTo(face3) == 0) {
+				h.setRank(Rank.THREE_OF_A_KIND);
 				return true; 
+			}
 		}
 		return false;
 	}

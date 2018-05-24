@@ -2,8 +2,6 @@ package com.labs.nipamo.pokerhands;
 
 import java.util.Scanner;
 
-import com.labs.nipamo.pokerhands.ranks.*;
-
 public class Main{
 	
 	public static void main(String[] args) {

@@ -13,14 +13,14 @@ class StraightFlushTest {
 
 	@Test
 	void testStraightFlushExists() {
-		Hand hand = new Hand("4S 5S 6S 7S 9S");	
+		Hand hand = new Hand("4S 5S 6S 7S 8S");	
 		StraightFlush straightFlush = new StraightFlush();
 		boolean result = straightFlush.isRank(hand);
 		straightFlush.setScore(hand);
 		
 		assertEquals(true, result);
 		assertEquals(Rank.STRAIGHT_FLUSH, hand.getRank());
-		assertEquals(Face.NINE, hand.getScore());
+		assertEquals(Face.EIGHT, hand.getScore());
 	}
 	
 	@Test

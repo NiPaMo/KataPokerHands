@@ -15,8 +15,6 @@ public class Flush implements IRank {
 	
 	@Override
 	public boolean isRank(Hand h) {
-		h.setRank(Rank.FLUSH);
-
 		suit1 = h.getCard(0).getSuit();
 		suit2 = h.getCard(1).getSuit();
 		suit3 = h.getCard(2).getSuit();
@@ -24,23 +22,20 @@ public class Flush implements IRank {
 		suit5 = h.getCard(4).getSuit();
 
 		int first = suit1.ordinal();
-		if (suit2.ordinal() == first + 1 &&
-			suit3.ordinal() == first + 2 &&
-			suit4.ordinal() == first + 3 &&
-			suit5.ordinal() == first + 4)
+		if (suit2.ordinal() == first &&
+			suit3.ordinal() == first &&
+			suit4.ordinal() == first &&
+			suit5.ordinal() == first) {
+			h.setRank(Rank.FLUSH);
 			return true;
+		}
 				
 		return false;
 	}
 	
 	@Override
 	public void setScore(Hand h) {		
-		score = h.getCard(0).getFace();
-		
-		for (int i = 0; i < 5; i++) {
-			if (score.compareTo(h.getCard(i).getFace()) < 0)
-				score = h.getCard(i).getFace();
-		}
+		score = h.getCard(4).getFace();
 		
 		h.setScore(score);
 	}

@@ -16,12 +16,13 @@ public class HighCard implements IRank {
 	
 	@Override
 	public void setScore(Hand h) {
-		score = h.getCard(0).getFace();
+		score = h.getCard(4).getFace();
 		
-		for (int i = 0; i < 5; i++) {
-			if (score.compareTo(h.getCard(i).getFace()) < 0)
-				score = h.getCard(i).getFace();
-		}
+		h.setScore(score);
+	}
+	
+	public void setScore(Hand h, int i) {
+		score = h.getCard(3 - i).getFace();
 		
 		h.setScore(score);
 	}

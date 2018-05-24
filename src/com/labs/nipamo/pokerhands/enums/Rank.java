@@ -8,7 +8,7 @@ public enum Rank {
 	STRAIGHT ("straight"),
 	FLUSH ("flush"),
 	FULL_HOUSE ("full house"),
-	FOUR_OF_A_KIND ("fout of a kind"),
+	FOUR_OF_A_KIND ("four of a kind"),
 	STRAIGHT_FLUSH ("straight flush");
 	
 	private String value;

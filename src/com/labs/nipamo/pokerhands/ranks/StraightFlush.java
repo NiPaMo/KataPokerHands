@@ -9,13 +9,13 @@ public class StraightFlush implements IRank {
 	
 	@Override
 	public boolean isRank(Hand h) {
-		h.setRank(Rank.STRAIGHT_FLUSH);
-
 		Straight s = new Straight();
 		Flush f = new Flush();
 		
-		if (s.isRank(h) && f.isRank(h))
+		if (s.isRank(h) && f.isRank(h)) {
+			h.setRank(Rank.STRAIGHT_FLUSH);
 			return true;
+		}
 		
 		return false;
 	}
