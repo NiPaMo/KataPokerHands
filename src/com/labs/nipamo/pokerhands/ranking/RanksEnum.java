@@ -2,6 +2,7 @@ package com.labs.nipamo.pokerhands.ranking;
 
 public enum RanksEnum {
 	HIGH_CARD ("high card"),
+	PAIR ("pair"),
 	TWO_PAIRS ("two pairs"),
 	THREE_OF_A_KIND ("three of a kind"),
 	STRAIGHT ("straight"),

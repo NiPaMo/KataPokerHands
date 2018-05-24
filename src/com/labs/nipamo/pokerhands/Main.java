@@ -28,7 +28,7 @@ public class Main {
 		Ranker.rank(hand2);
 		
 		// Compare the rank and score of each hand to determine a winner
-		result = Comparator.getResult(hand1, hand2);
+		result = HandComparator.getResult(hand1, hand2);
 		
 		// Print out the result
 		System.out.println(result);

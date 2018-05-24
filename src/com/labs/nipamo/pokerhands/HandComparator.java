@@ -1,11 +1,11 @@
 package com.labs.nipamo.pokerhands;
 
-public abstract class Comparator {
+public abstract class HandComparator {
 
 	private static int winner;
 	
 	// Private constructor so class cannot be instantiated
-	private Comparator() { }
+	private HandComparator() { }
 	
 	private static void compareRank(Hand h1, Hand h2) {
 		if (h1.getRank().compareTo(h2.getRank()) > 0) {
@@ -35,6 +35,6 @@ public abstract class Comparator {
 		else if (winner == 2)
 			return("White wins. - with " + h2.getRank().getValue() + ": " + h2.getScore().getValue());
 		else
-			return("Tie");
+			return("Tie.");
 	}
 }

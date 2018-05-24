@@ -8,13 +8,24 @@ public class StraightFlush implements IRank {
 	
 	@Override
 	public boolean isRank(Hand h) {
-		// TODO Auto-generated method stub
+		h.setRank(RanksEnum.STRAIGHT_FLUSH);
+
+		Straight s = new Straight();
+		Flush f = new Flush();
+		
+		if (s.isRank(h) && f.isRank(h))
+			return true;
+		
 		return false;
 	}
 	
 	@Override
 	public void setScore(Hand h) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < 5; i++) {
+			if (score.compareTo(h.getCard(i).getFace()) < 0)
+				score = h.getCard(i).getFace();
+		}
+		
 		h.setScore(score);
 	}
 }

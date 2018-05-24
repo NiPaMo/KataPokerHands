@@ -1,6 +1,8 @@
 package com.labs.nipamo.pokerhands;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import com.labs.nipamo.pokerhands.ranking.RanksEnum;
 
@@ -9,6 +11,13 @@ public class Hand {
 	private RanksEnum rank;
 	private FacesEnum score;
 	
+	/**
+	 * Creates a Hand object of 5 cards
+	 * Sorted left to right by increasing rank
+	 * 
+	 * @param str - A string in the form of "SF SF SF SF SF"
+	 * 				where 'S' = suit and 'F' = face
+	 */
 	public Hand(String str) {
 		ArrayList<FacesEnum> faces = new ArrayList<>();
 		ArrayList<SuitsEnum> suits = new ArrayList<>();
@@ -37,6 +46,14 @@ public class Hand {
 		cards.add(c3);
 		cards.add(c4);
 		cards.add(c5);
+		
+		// Sort the cards by face value
+		Collections.sort(cards, new Comparator<Card>() {
+		    @Override
+		    public int compare(Card o1, Card o2) {
+		        return o1.getFace().compareTo(o2.getFace());
+		    }
+		});
 	}
 	
 	public Card getCard(int i) {

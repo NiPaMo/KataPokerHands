@@ -8,6 +8,8 @@ public class HighCard implements IRank {
 
 	@Override
 	public boolean isRank(Hand h) {
+		h.setRank(RanksEnum.HIGH_CARD);
+		
 		return true;
 	}
 	
