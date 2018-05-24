@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
-import com.labs.nipamo.pokerhands.ranking.Flush;
-import com.labs.nipamo.pokerhands.ranking.RanksEnum;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
+import com.labs.nipamo.pokerhands.ranks.Flush;
 
 class FlushTest {
 
@@ -19,8 +19,8 @@ class FlushTest {
 		flush.setScore(hand);
 		
 		assertEquals(true, result);
-		assertEquals(RanksEnum.FLUSH, hand.getRank());
-		assertEquals(FacesEnum.QUEEN, hand.getScore());
+		assertEquals(Rank.FLUSH, hand.getRank());
+		assertEquals(Face.QUEEN, hand.getScore());
 	}
 	
 	@Test

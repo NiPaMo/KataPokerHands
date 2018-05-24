@@ -1,17 +1,18 @@
-package com.labs.nipamo.pokerhands.ranking;
+package com.labs.nipamo.pokerhands.ranks;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
 
 public class ThreeOfAKind implements IRank {
-	private FacesEnum score;
-	private FacesEnum face1;
-	private FacesEnum face2;
-	private FacesEnum face3;
+	private Face score;
+	private Face face1;
+	private Face face2;
+	private Face face3;
 
 	@Override
 	public boolean isRank(Hand h) {
-		h.setRank(RanksEnum.THREE_OF_A_KIND);
+		h.setRank(Rank.THREE_OF_A_KIND);
 		
 		for (int i = 0; i < 2; i++) {
 			face1 = h.getCard(i).getFace();

@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
-import com.labs.nipamo.pokerhands.ranking.HighCard;
-import com.labs.nipamo.pokerhands.ranking.RanksEnum;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
+import com.labs.nipamo.pokerhands.ranks.HighCard;
 
 class HighCardTest {
 
@@ -19,7 +19,7 @@ class HighCardTest {
 		highCard.setScore(hand);
 		
 		assertEquals(true, result);
-		assertEquals(RanksEnum.HIGH_CARD, hand.getRank());
-		assertEquals(FacesEnum.KING, hand.getScore());
+		assertEquals(Rank.HIGH_CARD, hand.getRank());
+		assertEquals(Face.KING, hand.getScore());
 	}
 }

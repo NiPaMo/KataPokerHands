@@ -1,16 +1,17 @@
-package com.labs.nipamo.pokerhands.ranking;
+package com.labs.nipamo.pokerhands.ranks;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
 
 public class Pair implements IRank {
-	private FacesEnum score;
-	private FacesEnum face1;
-	private FacesEnum face2;
+	private Face score;
+	private Face face1;
+	private Face face2;
 
 	@Override
 	public boolean isRank(Hand h) {
-		h.setRank(RanksEnum.PAIR);
+		h.setRank(Rank.PAIR);
 
 		for (int i = 0; i < 4; i++) {
 			face1 = h.getCard(i).getFace();

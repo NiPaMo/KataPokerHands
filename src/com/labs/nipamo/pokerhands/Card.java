@@ -1,25 +1,28 @@
 package com.labs.nipamo.pokerhands;
 
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Suit;
+
 public class Card {
-	private SuitsEnum suit;
-	private FacesEnum face;
+	private Suit suit;
+	private Face face;
 	
 	/**
 	 * Creates a Card object from a SuitsEnum and FacesEnum
 	 * 
-	 * @param s - SuitsEnum 
-	 * @param f - FacesEnum
+	 * @param s - Suit
+	 * @param f - Face
 	 */
-	public Card(SuitsEnum s, FacesEnum f) {
-		this.suit = s;
+	public Card(Face f, Suit s) {
 		this.face = f;
+		this.suit = s;
 	}
 	
-	public SuitsEnum getSuit() {
+	public Suit getSuit() {
 		return this.suit;
 	}
 	
-	public FacesEnum getFace() {
+	public Face getFace() {
 		return this.face;
 	}
 }

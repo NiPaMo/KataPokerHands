@@ -1,4 +1,4 @@
-package com.labs.nipamo.pokerhands.ranking;
+package com.labs.nipamo.pokerhands.ranks;
 
 import com.labs.nipamo.pokerhands.Hand;
 

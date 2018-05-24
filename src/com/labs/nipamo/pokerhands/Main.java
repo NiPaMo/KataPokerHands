@@ -1,7 +1,8 @@
 package com.labs.nipamo.pokerhands;
 
 import java.util.Scanner;
-import com.labs.nipamo.pokerhands.ranking.*;
+
+import com.labs.nipamo.pokerhands.ranks.*;
 
 public class Main {
 	private static Hand hand1;

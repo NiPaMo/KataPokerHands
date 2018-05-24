@@ -1,18 +1,19 @@
-package com.labs.nipamo.pokerhands.ranking;
+package com.labs.nipamo.pokerhands.ranks;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
 
 public class TwoPairs implements IRank {
-	private FacesEnum score;
-	private FacesEnum face1a;
-	private FacesEnum face2a;
-	private FacesEnum face1b;
-	private FacesEnum face2b;	
+	private Face score;
+	private Face face1a;
+	private Face face2a;
+	private Face face1b;
+	private Face face2b;	
 
 	@Override
 	public boolean isRank(Hand h) {
-		h.setRank(RanksEnum.TWO_PAIRS);
+		h.setRank(Rank.TWO_PAIRS);
 
 		for (int i = 0; i < 2; i++) {
 			face1a = h.getCard(i).getFace();

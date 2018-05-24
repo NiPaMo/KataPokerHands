@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
-import com.labs.nipamo.pokerhands.ranking.RanksEnum;
-import com.labs.nipamo.pokerhands.ranking.TwoPairs;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
+import com.labs.nipamo.pokerhands.ranks.TwoPairs;
 
 class TwoPairsTest {
 
@@ -19,8 +19,8 @@ class TwoPairsTest {
 		twoPairs.setScore(hand);
 		
 		assertEquals(true, result);
-		assertEquals(RanksEnum.TWO_PAIRS, hand.getRank());
-		assertEquals(FacesEnum.FIVE, hand.getScore());
+		assertEquals(Rank.TWO_PAIRS, hand.getRank());
+		assertEquals(Face.FIVE, hand.getScore());
 	}
 	
 	@Test

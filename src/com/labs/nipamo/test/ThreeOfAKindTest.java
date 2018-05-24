@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
-import com.labs.nipamo.pokerhands.ranking.RanksEnum;
-import com.labs.nipamo.pokerhands.ranking.ThreeOfAKind;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
+import com.labs.nipamo.pokerhands.ranks.ThreeOfAKind;
 
 class ThreeOfAKindTest {
 
@@ -19,8 +19,8 @@ class ThreeOfAKindTest {
 		threeOfAKind.setScore(hand);
 		
 		assertEquals(true, result);
-		assertEquals(RanksEnum.THREE_OF_A_KIND, hand.getRank());
-		assertEquals(FacesEnum.ACE, hand.getScore());
+		assertEquals(Rank.THREE_OF_A_KIND, hand.getRank());
+		assertEquals(Face.ACE, hand.getScore());
 	}
 	
 	@Test

@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import com.labs.nipamo.pokerhands.ranking.RanksEnum;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
+import com.labs.nipamo.pokerhands.enums.Suit;
 
 public class Hand {
 	private ArrayList<Card> cards;
-	private RanksEnum rank;
-	private FacesEnum score;
+	private Rank rank;
+	private Face score;
 	
 	/**
 	 * Creates a Hand object of 5 cards
@@ -19,22 +21,22 @@ public class Hand {
 	 * 				where 'S' = suit and 'F' = face
 	 */
 	public Hand(String str) {
-		ArrayList<FacesEnum> faces = new ArrayList<>();
-		ArrayList<SuitsEnum> suits = new ArrayList<>();
+		ArrayList<Face> faces = new ArrayList<>();
+		ArrayList<Suit> suits = new ArrayList<>();
 
 		for (int i = 0; i < str.length(); i++) {
-			FacesEnum face = FacesEnum.getEnum(str.substring(i, i+1));
-			SuitsEnum suit = SuitsEnum.getEnum(str.substring(i+1, i+2));
+			Face face = Face.getEnum(str.substring(i, i+1));
+			Suit suit = Suit.getEnum(str.substring(i+1, i+2));
 			i+=2;
 			faces.add(face);
 			suits.add(suit);
 		}
 		
-		Card card1 = new Card(suits.get(0),faces.get(0));
-		Card card2 = new Card(suits.get(1),faces.get(1));
-		Card card3 = new Card(suits.get(2),faces.get(2));
-		Card card4 = new Card(suits.get(3),faces.get(3));
-		Card card5 = new Card(suits.get(4),faces.get(4));
+		Card card1 = new Card(faces.get(0), suits.get(0));
+		Card card2 = new Card(faces.get(1), suits.get(1));
+		Card card3 = new Card(faces.get(2), suits.get(2));
+		Card card4 = new Card(faces.get(3), suits.get(3));
+		Card card5 = new Card(faces.get(4), suits.get(4));
 		
 		addCards(card1, card2, card3, card4, card5);
 	}
@@ -60,19 +62,19 @@ public class Hand {
 		return this.cards.get(i);
 	}
 	
-	public void setRank(RanksEnum r) {
+	public void setRank(Rank r) {
 		 this.rank = r;
 	}
 	
-	public RanksEnum getRank() {
+	public Rank getRank() {
 		return this.rank;	
 	}	
 	
-	public void setScore(FacesEnum s) {
+	public void setScore(Face s) {
 		this.score = s;
 	}
 	
-	public FacesEnum getScore() {
+	public Face getScore() {
 		return this.score;
 	}
 }

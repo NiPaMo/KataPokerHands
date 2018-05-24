@@ -1,22 +1,17 @@
-package com.labs.nipamo.pokerhands.ranking;
+package com.labs.nipamo.pokerhands.ranks;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
 
-public class StraightFlush implements IRank {
-	private FacesEnum score;
-	
+public class HighCard implements IRank {
+	private Face score;
+
 	@Override
 	public boolean isRank(Hand h) {
-		h.setRank(RanksEnum.STRAIGHT_FLUSH);
-
-		Straight s = new Straight();
-		Flush f = new Flush();
+		h.setRank(Rank.HIGH_CARD);
 		
-		if (s.isRank(h) && f.isRank(h))
-			return true;
-		
-		return false;
+		return true;
 	}
 	
 	@Override
@@ -27,7 +22,6 @@ public class StraightFlush implements IRank {
 			if (score.compareTo(h.getCard(i).getFace()) < 0)
 				score = h.getCard(i).getFace();
 		}
-
 		
 		h.setScore(score);
 	}

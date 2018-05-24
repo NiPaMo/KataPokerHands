@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
-import com.labs.nipamo.pokerhands.ranking.RanksEnum;
-import com.labs.nipamo.pokerhands.ranking.Straight;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
+import com.labs.nipamo.pokerhands.ranks.Straight;
 
 class StraightTest {
 
@@ -19,8 +19,8 @@ class StraightTest {
 		straight.setScore(hand);
 		
 		assertEquals(true, result);
-		assertEquals(RanksEnum.STRAIGHT, hand.getRank());
-		assertEquals(FacesEnum.SEVEN, hand.getScore());
+		assertEquals(Rank.STRAIGHT, hand.getRank());
+		assertEquals(Face.SEVEN, hand.getScore());
 	}
 	
 	@Test

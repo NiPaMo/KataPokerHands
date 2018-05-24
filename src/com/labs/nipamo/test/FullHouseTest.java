@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
-import com.labs.nipamo.pokerhands.ranking.FullHouse;
-import com.labs.nipamo.pokerhands.ranking.RanksEnum;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
+import com.labs.nipamo.pokerhands.ranks.FullHouse;
 
 class FullHouseTest {
 
@@ -19,8 +19,8 @@ class FullHouseTest {
 		fullHouse.setScore(hand);
 		
 		assertEquals(true, result);
-		assertEquals(RanksEnum.FULL_HOUSE, hand.getRank());
-		assertEquals(FacesEnum.TEN, hand.getScore());
+		assertEquals(Rank.FULL_HOUSE, hand.getRank());
+		assertEquals(Face.TEN, hand.getScore());
 	}
 	
 	@Test

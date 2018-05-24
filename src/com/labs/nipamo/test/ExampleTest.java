@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import com.labs.nipamo.pokerhands.HandComparator;
+import com.labs.nipamo.pokerhands.ranks.Ranker;
 import com.labs.nipamo.pokerhands.Hand;
-import com.labs.nipamo.pokerhands.ranking.Ranker;
 
 class ExampleTest {
 

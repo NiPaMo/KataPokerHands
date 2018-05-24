@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
-import com.labs.nipamo.pokerhands.ranking.RanksEnum;
-import com.labs.nipamo.pokerhands.ranking.StraightFlush;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
+import com.labs.nipamo.pokerhands.ranks.StraightFlush;
 
 class StraightFlushTest {
 
@@ -19,8 +19,8 @@ class StraightFlushTest {
 		straightFlush.setScore(hand);
 		
 		assertEquals(true, result);
-		assertEquals(RanksEnum.STRAIGHT_FLUSH, hand.getRank());
-		assertEquals(FacesEnum.NINE, hand.getScore());
+		assertEquals(Rank.STRAIGHT_FLUSH, hand.getRank());
+		assertEquals(Face.NINE, hand.getScore());
 	}
 	
 	@Test

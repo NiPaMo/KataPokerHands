@@ -1,6 +1,6 @@
-package com.labs.nipamo.pokerhands;
+package com.labs.nipamo.pokerhands.enums;
 
-public enum SuitsEnum {
+public enum Suit {
 	CLUBS("C"),
 	DIAMONDS("D"),
 	HEARTS("H"),
@@ -8,14 +8,14 @@ public enum SuitsEnum {
 	
 	private String value;
 	
-	SuitsEnum (String str){
+	Suit (String str){
 		value = str;
 	}
 	
 	// Return the enum value using the given string value
-	public static SuitsEnum getEnum(String str) 
+	public static Suit getEnum(String str) 
 	{		
-		for (SuitsEnum suit : values())
+		for (Suit suit : values())
 		{
 			if (suit.value.equals(str))
 				return suit;

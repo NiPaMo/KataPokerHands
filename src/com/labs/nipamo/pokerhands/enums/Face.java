@@ -1,6 +1,6 @@
-package com.labs.nipamo.pokerhands;
+package com.labs.nipamo.pokerhands.enums;
 
-public enum FacesEnum {
+public enum Face {
 	TWO("2"),
 	THREE("3"),
 	FOUR("4"),
@@ -17,12 +17,12 @@ public enum FacesEnum {
 	
 	private String value;
 	
-	FacesEnum(String str) { 
+	Face(String str) { 
 		value = str; 
 	}
 	
 	public String getValue() {
-		// Create longer strings from values
+		// Create longer strings from values for printing
 		switch (this.value) {
 			case "T":
 				return "10";
@@ -40,8 +40,8 @@ public enum FacesEnum {
 	}
 	
 	// Return the enum using the given string value
-	public static FacesEnum getEnum(String str) {
-		for (FacesEnum face : values()) {
+	public static Face getEnum(String str) {
+		for (Face face : values()) {
 			if (face.value.equals(str))
 				return face;
 		}

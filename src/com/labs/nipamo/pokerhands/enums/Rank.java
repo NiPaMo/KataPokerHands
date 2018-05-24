@@ -1,6 +1,6 @@
-package com.labs.nipamo.pokerhands.ranking;
+package com.labs.nipamo.pokerhands.enums;
 
-public enum RanksEnum {
+public enum Rank {
 	HIGH_CARD ("high card"),
 	PAIR ("pair"),
 	TWO_PAIRS ("two pairs"),
@@ -13,7 +13,7 @@ public enum RanksEnum {
 	
 	private String value;
 	
-	RanksEnum(String str) { 
+	Rank(String str) { 
 		value = str; 
 	}
 	

@@ -1,20 +1,21 @@
-package com.labs.nipamo.pokerhands.ranking;
+package com.labs.nipamo.pokerhands.ranks;
 
-import com.labs.nipamo.pokerhands.FacesEnum;
 import com.labs.nipamo.pokerhands.Hand;
-import com.labs.nipamo.pokerhands.SuitsEnum;
+import com.labs.nipamo.pokerhands.enums.Face;
+import com.labs.nipamo.pokerhands.enums.Rank;
+import com.labs.nipamo.pokerhands.enums.Suit;
 
 public class Flush implements IRank {
-	private FacesEnum score;
-	private SuitsEnum suit1;
-	private SuitsEnum suit2;
-	private SuitsEnum suit3;
-	private SuitsEnum suit4;
-	private SuitsEnum suit5;
+	private Face score;
+	private Suit suit1;
+	private Suit suit2;
+	private Suit suit3;
+	private Suit suit4;
+	private Suit suit5;
 	
 	@Override
 	public boolean isRank(Hand h) {
-		h.setRank(RanksEnum.FLUSH);
+		h.setRank(Rank.FLUSH);
 
 		suit1 = h.getCard(0).getSuit();
 		suit2 = h.getCard(1).getSuit();
