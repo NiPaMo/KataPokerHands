@@ -1,11 +1,19 @@
-package com.labs.nipamo.pokerhands.ranks;
+package com.labs.nipamo.pokerhands;
 
-import com.labs.nipamo.pokerhands.Hand;
+import com.labs.nipamo.pokerhands.ranks.Flush;
+import com.labs.nipamo.pokerhands.ranks.FourOfAKind;
+import com.labs.nipamo.pokerhands.ranks.FullHouse;
+import com.labs.nipamo.pokerhands.ranks.HighCard;
+import com.labs.nipamo.pokerhands.ranks.Pair;
+import com.labs.nipamo.pokerhands.ranks.Straight;
+import com.labs.nipamo.pokerhands.ranks.StraightFlush;
+import com.labs.nipamo.pokerhands.ranks.ThreeOfAKind;
+import com.labs.nipamo.pokerhands.ranks.TwoPairs;
 
-public abstract class Ranker {
+public abstract class HandRanker {
 	
 	// Private constructor so class cannot be instantiated
-	private Ranker() { }
+	private HandRanker() { }
 	
 	public static void rank(Hand h) {
 		StraightFlush straightFlush = new StraightFlush();
